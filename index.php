@@ -64,20 +64,46 @@
 
         </section>
 
+        <?php
+        $name = $email = $message = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = test_input($_POST["name"]);
+            $email = test_input($_POST["email"]);
+            $subject = test_input($_POST["assunto"]);
+            $message = test_input($_POST["message"]);
+
+            $headers = array("From: ueneslucio@gmail.com",
+                "Reply-To: ueneslucio@gmail.com",
+                "X-Mailer: PHP/" . PHP_VERSION
+            );
+            $headers = implode("\r\n", $headers);
+
+            mail('ueneslucio@gmail.com', $subject, $message, $headers);
+        }
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        ?>
+
         <section class="TransparentSection" id="contato">
-            <form>
+            <form method="post">
                 <h1> Entre em Contato </h1></br>
-                <label for="inputEmail" class="col-lg-2 control-label" > Nome </label>
+                <label class="col-lg-2 control-label" > Nome </label>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control input-sm"/>
+                    <input name="name" type="text" class="form-control input-sm" value="<?php echo $name; ?>" />
                 </div></br></br></br>
                 <label for="inputEmail" class="col-lg-2 control-label" > Email </label>
                 <div class="col-lg-4">
-                    <input type="text" class="form-control input-sm"/>
+                    <input name="email" type="text" class="form-control input-sm" value="<?php echo $email; ?>"/>
                 </div></br></br></br>
                 <label for="inputEmail" class="col-lg-2 control-label" > Motivo do Contato </label>
                 <div class="col-lg-4">
-                    <select class="form-control" >
+                    <select class="form-control" name="assunto" >
                         <option>Informaçao</option>
                         <option>Sugestao</option>
                         <option>Reclamaçao</option>
@@ -85,12 +111,12 @@
                     </select>
                 </div></br></br></br>
 
-                <label for="inputEmail" class="col-lg-2 control-label" > Mensagem </label>
+                <label class="col-lg-2 control-label" > Mensagem </label>
                 <div class="col-lg-10">
-                    <textarea rows="3" class="form-control input-sm"></textarea>
+                    <textarea name="message" rows="3" class="form-control input-sm" value="<?php echo $message; ?>"></textarea>
                 </div>
                 </br></br></br></br></br>
-                <button type="submit" class="btn btn-primary btn-lg" >Enviar </button>
+                <button type="submit" name="submit" class="btn btn-primary btn-lg" >Enviar </button>
             </form>
         </section>
         </br></br></br></br>
