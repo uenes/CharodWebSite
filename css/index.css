@@ -1,6 +1,32 @@
 img.bigbanner {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;	
+    width: 100%;
+    height: auto;
 }
-    
+
+.darkSection {
+    position: relative;
+    padding: 20px;
+    background-color: #1f3549;
+    color: #ffffff;
+}
+
+.footerSection {
+    position: relative;
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+    color: #4f8fc9;
+}
+
+.darkSection h1, h2,h3{
+    color: #E1E3EA;    
+}
+
+.TransparentSection {
+    position: relative;
+    padding: 20px;
+}
