@@ -29,40 +29,55 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="#sobreNosSection">Sobre Nós</a></li>
+                        <li><a href="#identidadeCidada">Identidade Cidadã</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
 
-        <div class="jumbotron" id="topSection">
-            <div class="container">
-                <div class="ca_zone ca_zone1"><!--Product-->
-                    <div class="ca_wrap ca_wrap1">
-                        <a href="#sobreNosSection">
-                            <img class="bigbanner" id="sobreNos" src="images/bannerSobreNos.png" >
-                        </a>
-                        <img style="display:none" class="bigbanner" id="idCidada" src="images/bannerIdentidadeCidada.png" >
+        <div class="bannerSection" > 
+            <div class="jumbotron" id="topSection">
+                <div class="container">
+                    <div class="ca_zone ca_zone1"><!--Product-->
+                        <div class="ca_wrap ca_wrap1">
+                            <a href="#sobreNosSection">
+                                <img class="bigbanner" id="sobreNos" src="images/bannerSobreNos.png" >
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <section class="darkSection" id="sobreNosSection" >
-            <h1> Sobre Nós </h1>
-            <h2>Missão</h2>
-            <h3>Proporcionar maior conforto para as pessoas através da tecnologia com a geração de valores para nossos clientes e os stakeholders.</h3>
-            </br></br>
-            <h2>Visão</h2>
-            <h3>Oferecer um serviço de excelência e inovação para empresas e governos.</h3>
-            </br></br>
-            <h2>Valores</h2>
-            <h3>Conquistar a <b>confiança</b> dos clientes </br>
-                <b>Comprometimento</b> com os resultados diante de clientes e stakeholders </br>
-                Oferecer <b>transparência</b> através de comunicação clara e contínuos feedbacks</br>
-                <b>Responsabilidade</b> nas conduções e decições, e assim contribuir para uma sociedade melhor</br></h3>
-
+        <section id="sobreNosSection" >
+            <div class="darkSection">
+                <h1> Sobre Nós </h1>
+                <h2>Missão</h2>
+                <h3>Proporcionar maior conforto para as pessoas através da tecnologia com a geração de valores para nossos clientes e os stakeholders.</h3>
+                </br></br>
+                <h2>Visão</h2>
+                <h3>Oferecer um serviço de excelência e inovação para empresas e governos.</h3>
+                </br></br>
+                <h2>Valores</h2>
+                <h3>Conquistar a <b>confiança</b> dos clientes </br>
+                    <b>Comprometimento</b> com os resultados diante de clientes e stakeholders </br>
+                    Oferecer <b>transparência</b> através de comunicação clara e contínuos feedbacks</br>
+                    <b>Responsabilidade</b> nas conduções e decições, e assim contribuir para uma sociedade melhor</br></h3>
+            </div>
         </section>
+
+        <div class="bannerSectionCidada" id="identidadeCidada"> 
+            
+                <div class="container">
+                    <div class="ca_zone ca_zone1">
+                        <div class="ca_wrap ca_wrap1">
+                            <img class="bigbanner" id="cidadeCidada" src="images/bannerIdentidadeCidada.png" >
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
 
         <?php
         $name = $email = $message = "";
