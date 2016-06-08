@@ -7,22 +7,24 @@ img.bigbanner {
 }
 
 .bannerSection {
-	position: relative;
-        height: 650px;
-	width: 100%;
-	background-color: #0062b7;
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #0062b7;
 }
 
 .bannerSectionCidada {
-	position: relative;
-        height: 613.5px;
-	width: 100%;
-	background-color: #000000;
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #000000;
 }
 
 section .darkSection {
     position: relative;
     padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #ffffff;
     color: #3C47B3;
 }
@@ -38,6 +40,10 @@ section .darkSection {
 
 .darkSection h1, h2,h3{
     color: #494949;    
+}
+
+section h3 {
+    font-family: Open Sans;
 }
 
 .TransparentSection {
